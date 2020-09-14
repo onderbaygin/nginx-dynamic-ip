@@ -37,9 +37,9 @@ def run():
             ssh.connect(host, username=username, password=password)
             ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command('service nginx restart')
             toast.show_toast("IP Updated!","home.example.com new ip: " + ip, duration=10)
-            time.sleep(10)
+            time.sleep(600)
     except:
-        time.sleep(10)
+        time.sleep(600)
 
 while True:
     run()
